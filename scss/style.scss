@@ -1,0 +1,19 @@
+@import "color";
+@import "component";
+@import "typography";
+@import "utilities";
+@import "animation";
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 15px;
+  font-family: "Urbanist", "Roboto", sans-serif;
+  width: 100%;
+  background: var(--bg-color);
+  color: var(--primary-text-color);
+  overflow-x: hidden;
+}
