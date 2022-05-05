@@ -19,6 +19,10 @@
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
+.my-14 {
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+}
 .my-6 {
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -120,4 +124,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.scale-0_1 {
+  transform: scale(0.1);
 }
