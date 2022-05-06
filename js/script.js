@@ -5,19 +5,17 @@ const closeHamburgerMenuIcon = document.getElementById("close-hamburger-icon");
 const responsiveNavEl = document.getElementById("nav-responsive");
 const searchTagDeleteIcons = document.querySelectorAll(".search-tag__delete");
 const categoriesEls = document.querySelectorAll(".popular__categories > li");
+const themeTogglerEl = document.getElementById("theme-color-toggler");
+const themeTogglerEl2 = document.getElementById("theme-color-toggler-2");
 
 function callbackFunc(entries, observer) {
   entries.forEach((entry) => {
     let tempEl = entry.target;
     let tempElAnimate = entry.target.getAttribute("data-animate");
 
-    if (entry.isIntersecting) {
-      tempEl.classList.remove("scale-0_1");
-      tempEl.classList.add(tempElAnimate);
-    } else {
-      tempEl.classList.add("scale-0_1");
-      tempEl.classList.remove(tempElAnimate);
-    }
+    entry.isIntersecting
+      ? tempEl.classList.add(tempElAnimate)
+      : tempEl.classList.remove(tempElAnimate);
   });
 }
 
@@ -33,6 +31,7 @@ observer.observe(document.getElementById("steps-img-1"));
 observer.observe(document.getElementById("steps-img-2"));
 observer.observe(document.getElementById("why-img-1"));
 observer.observe(document.getElementById("why-img-2"));
+observer.observe(document.getElementById("feedback-img-1"));
 
 openHamburgerMenuIcon.addEventListener("click", function () {
   responsiveNavEl.classList.remove("nav--responsive--hidden");
@@ -68,3 +67,15 @@ categoriesEls.forEach((el) => {
     classTarget.classList.remove("d-none");
   });
 });
+
+function toggleTheme() {
+  document.querySelector("body").classList.toggle("dark");
+  if (document.querySelector("body").classList.contains("dark")) {
+    this.querySelector("a").textContent = "Dark Mode";
+  } else {
+    this.querySelector("a").textContent = "Light Mode";
+  }
+}
+
+themeTogglerEl.addEventListener("click", toggleTheme);
+themeTogglerEl2.addEventListener("click", toggleTheme);

@@ -7,6 +7,7 @@
   --light-gray-color: #e4e4e4;
   --primary-text-color: #1c2950;
   --bg-color: #f9fbfd;
+  --active-nav-li-color: hsl(221, 85%, 95%);
 
   // Header linear gradient
   --header-gradient-color-1: hsl(219, 83%, 93%);
@@ -22,19 +23,33 @@
   --input-bg-color: #fafbfe;
   --input-placeholder-color: #a7afbe;
 }
+.dark {
+  --warm-white: #2a2626;
+  --primary-color: #bb7ffb;
+  --secondary-color: #31a399;
+  --white-color: #161616;
+  --gray-color: #979797;
+  --light-gray-color: #e4e4e4;
+  --primary-text-color: #eee;
+  --bg-color: #121212;
+  --active-nav-li-color: hsl(0, 0%, 0%);
+
+  // Header linear gradient
+  --header-gradient-color-1: hsl(0, 0%, 15%);
+  --header-gradient-color-2: hsl(0, 0%, 25%);
+  --header-gradient-color-3: hsl(0, 0%, 30%);
+
+  // Orbit border color
+  --shade-of-gray-1: rgba(255, 255, 255, 0.05);
+
+  // Form container
+  --shade-of-white-1: #7e7e7e;
+  --shade-of-white-2: #242424;
+  --input-bg-color: #2d2d2d;
+  --input-placeholder-color: #b4b2b6;
+}
 
 // --- Font color ---
-.fc-primary {
-  color: var(--primary-color);
-}
 .fc-gray {
   color: var(--gray-color);
-}
-.fc-white {
-  color: var(--primary-text-color);
-}
-
-// --- Background color ---
-.bg-black {
-  background: var(--bg-black);
 }
