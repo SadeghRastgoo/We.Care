@@ -4,6 +4,7 @@ const openHamburgerMenuIcon = document.getElementById("open-hamburger-icon");
 const closeHamburgerMenuIcon = document.getElementById("close-hamburger-icon");
 const responsiveNavEl = document.getElementById("nav-responsive");
 const searchTagDeleteIcons = document.querySelectorAll(".search-tag__delete");
+const categoriesEls = document.querySelectorAll(".popular__categories > li");
 
 function callbackFunc(entries, observer) {
   entries.forEach((entry) => {
@@ -46,5 +47,24 @@ closeHamburgerMenuIcon.addEventListener("click", closeHamburgerMenu);
 searchTagDeleteIcons.forEach((el) => {
   el.addEventListener("click", function () {
     console.log(el.parentElement.remove());
+  });
+});
+
+categoriesEls.forEach((el) => {
+  el.addEventListener("click", function () {
+    document.querySelectorAll(".popular__items").forEach((el) => {
+      el.classList.add("d-none");
+    });
+    categoriesEls.forEach((el) => {
+      el.classList.remove("active-category");
+      el.classList.remove("btn--primary");
+    });
+
+    el.classList.add("active-category");
+    el.classList.add("btn--primary");
+    let classTarget = document.querySelector(
+      `.${el.getAttribute("data-target")}`
+    );
+    classTarget.classList.remove("d-none");
   });
 });
