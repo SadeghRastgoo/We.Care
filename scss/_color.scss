@@ -8,6 +8,7 @@
   --primary-text-color: #1c2950;
   --bg-color: #f9fbfd;
   --active-nav-li-color: hsl(221, 85%, 95%);
+  --subscribe-input-bg: #1d2b51;
 
   // Header linear gradient
   --header-gradient-color-1: hsl(219, 83%, 93%);
@@ -22,6 +23,9 @@
   --shade-of-white-2: #f3f5fd;
   --input-bg-color: #fafbfe;
   --input-placeholder-color: #a7afbe;
+
+  --scrollbarBG: var(--light-gray-color);
+  --thumbBG: var(--bg-color);
 }
 .dark {
   --warm-white: #2a2626;
@@ -33,6 +37,10 @@
   --primary-text-color: #eee;
   --bg-color: #121212;
   --active-nav-li-color: hsl(0, 0%, 0%);
+  --subscribe-input-bg: hsl(224, 75%, 65%);
+
+  --scrollbarBG: var(--input-bg-color);
+  --thumbBG: var(--bg-color);
 
   // Header linear gradient
   --header-gradient-color-1: hsl(0, 0%, 15%);
@@ -47,6 +55,10 @@
   --shade-of-white-2: #242424;
   --input-bg-color: #2d2d2d;
   --input-placeholder-color: #b4b2b6;
+
+  .popular-item {
+    background: var(--shade-of-white-2) !important;
+  }
 }
 
 // --- Font color ---

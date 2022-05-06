@@ -397,9 +397,6 @@ body {
       }
     }
 
-    --scrollbarBG: var(--light-gray-color);
-    --thumbBG: var(--bg-color);
-
     .popular__items::-webkit-scrollbar {
       width: 11px;
       height: 11px;
@@ -832,7 +829,7 @@ body {
       border: none;
       padding: 1rem;
       border-radius: 0.5rem;
-      background: #1d2b51;
+      background: var(--subscribe-input-bg);
       color: var(--white-color);
       transition: background 0.5s;
       cursor: pointer;
