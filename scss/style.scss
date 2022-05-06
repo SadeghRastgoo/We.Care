@@ -346,3 +346,33 @@ body {
     }
   }
 }
+
+.feedback {
+  background: hsl(210, 50%, 98%);
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .feedback__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 575px;
+    margin: auto;
+  }
+
+  .feedback__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .feedback-main__img {
+    .feedback-img {
+      width: 100%;
+      max-width: 550px;
+    }
+  }
+}
