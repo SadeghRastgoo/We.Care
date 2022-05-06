@@ -71,9 +71,19 @@ categoriesEls.forEach((el) => {
 function toggleTheme() {
   document.querySelector("body").classList.toggle("dark");
   if (document.querySelector("body").classList.contains("dark")) {
-    this.querySelector("a").textContent = "Dark Mode";
+    if (this.classList.contains("nav__item")) {
+      this.querySelector("a").textContent = "Dark Mode";
+    }
+    document
+      .querySelector(".header__logo")
+      .setAttribute("src", "assets/WeCare-Logo-dark.png");
   } else {
-    this.querySelector("a").textContent = "Light Mode";
+    if (this.classList.contains("nav__item")) {
+      this.querySelector("a").textContent = "Light Mode";
+    }
+    document
+      .querySelector(".header__logo")
+      .setAttribute("src", "assets/WeCare-Logo.png");
   }
 }
 
