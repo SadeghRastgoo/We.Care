@@ -267,27 +267,19 @@ body {
 
 @media (max-width: 1200px) {
   .hero {
-    grid-template-columns: 1fr 1fr;
-    padding-bottom: 10rem;
-
-    .hero__img {
-      .hero-img {
-        position: absolute;
-        bottom: -2.5rem;
-        transform: scale(1.2);
-      }
-      .solar-system {
-        transform: translateX(-50%) scale(0.9);
-      }
-    }
-  }
-}
-@media (max-width: 1200px) {
-  .hero {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding-bottom: 10rem;
     margin-top: 5rem;
+
+    .hero__main {
+      align-items: center;
+      text-align: center;
+
+      .hero-main__heading {
+        max-width: 550px;
+      }
+    }
 
     .hero__img {
       .hero-img {
