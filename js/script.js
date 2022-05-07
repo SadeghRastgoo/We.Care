@@ -70,20 +70,22 @@ categoriesEls.forEach((el) => {
 
 function toggleTheme() {
   document.querySelector("body").classList.toggle("dark");
+  const logoEls = document.querySelectorAll(".header__logo");
   if (document.querySelector("body").classList.contains("dark")) {
     if (this.classList.contains("nav__item")) {
       this.querySelector("a").textContent = "Dark Mode";
     }
-    document
-      .querySelector(".header__logo")
-      .setAttribute("src", "assets/WeCare-Logo-dark.png");
+
+    logoEls.forEach((el) => {
+      el.setAttribute("src", "assets/WeCare-Logo-dark.png");
+    });
   } else {
     if (this.classList.contains("nav__item")) {
       this.querySelector("a").textContent = "Light Mode";
     }
-    document
-      .querySelector(".header__logo")
-      .setAttribute("src", "assets/WeCare-Logo.png");
+    logoEls.forEach((el) => {
+      el.setAttribute("src", "assets/WeCare-Logo.png");
+    });
   }
 }
 
